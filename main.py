@@ -79,7 +79,7 @@ def do_stuff_to_connections_list(service, connectionsList: list):
         if birthdays:
             birthday = birthdays[0].get('date')
 
-        if birthdays and names:
+        if birthdays and names and birthday["year"] != 1:
             try:
                 logging.info("NAME: " + name + "\t\tBirthday: " + str(birthday["month"]) + "/" + str(
                     birthday["day"]) + "/" + str(birthday["year"]))
